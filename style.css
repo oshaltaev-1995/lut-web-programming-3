@@ -39,3 +39,12 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
+
+
+tr.high {
+  background-color: #abffbd !important;
+}
+
+tr.low {
+  background-color: #ff9e9e !important;
+}
