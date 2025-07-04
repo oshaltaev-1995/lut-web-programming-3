@@ -1,5 +1,5 @@
-  const populationURL = "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/statfin_vaerak_pxt_11ra.px";
-  const employmentUrl = "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/statfin_tyokay_pxt_115b.px";
+const populationURL = "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/vaerak/statfin_vaerak_pxt_11ra.px";
+const employmentUrl = "https://pxdata.stat.fi/PxWeb/api/v1/fi/StatFin/tyokay/statfin_tyokay_pxt_115b.px";
 
 const fetchStatFinData = async (URL, body) => {
     const response = await fetch(URL, {
@@ -23,3 +23,7 @@ const inittializeCode = async () => {
 
     setupTable(populationData, employmentData);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    inittializeCode();
+});
